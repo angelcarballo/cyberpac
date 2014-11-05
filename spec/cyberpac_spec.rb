@@ -39,19 +39,19 @@ describe Cyberpac do
       end
       it "should be false with invalid mode" do
          subject.configure(valid_config.merge(mode: 'invalid-mode'))
-         expect(subject.configured?).not_to be
+         expect(subject.configured?).to_not be
       end
       it "should be false if merchant_code is missing" do
          subject.configure(valid_config.merge(merchant_code: nil))
-         expect(subject.configured?).not_to be
+         expect(subject.configured?).to_not be
       end
       it "should be false if terminal_number is missing" do
          subject.configure(valid_config.merge(terminal_number: nil))
-         expect(subject.configured?).not_to be
+         expect(subject.configured?).to_not be
       end
       it "should be false if secret is missing" do
          subject.configure(valid_config.merge(secret: nil))
-         expect(subject.configured?).not_to be
+         expect(subject.configured?).to_not be
       end
    end
 
