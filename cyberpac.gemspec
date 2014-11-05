@@ -4,23 +4,24 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'cyberpac/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "cyberpac"
+  spec.name          = 'cyberpac'
   spec.version       = Cyberpac::VERSION
-  spec.authors       = ["Angel Carballo"]
-  spec.email         = ["contact@angelcarballo.com"]
+  spec.authors       = ['Angel Carballo']
+  spec.email         = ['contact@angelcarballo.com']
   spec.description   = %q{Cyberpac Payment Gateway Wrapper}
   spec.summary       = %q{Cyberpac ruby wrapper}
-  spec.homepage      = "https://github.com/angelcarballo/cyberpac/"
-  spec.license       = "MIT"
+  spec.homepage      = 'https://github.com/angelcarballo/cyberpac/'
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
-  spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "guard"
-  spec.add_development_dependency "guard-rspec"
+  spec.add_development_dependency 'bundler', '~> 1.3'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'guard'
+  spec.add_development_dependency 'guard-rspec'
+  spec.add_development_dependency 'byebug'
 end
