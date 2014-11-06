@@ -4,6 +4,10 @@ require "cyberpac/payment"
 module Cyberpac
   CONFIG_KEYS = %w(merchant_code terminal_number secret mode)
   MODES = %w(test production)
+  LOCALES = YAML.load(File.read(File.expand_path('../../support/locales.yml', __FILE__)))
+  CURRENCIES = YAML.load(File.read(File.expand_path('../../support/currencies.yml', __FILE__)))
+  DEFAULT_CURRENCY = :eur
+  DEFAULT_LOCALE = :es
 
   class << self
     attr_accessor *CONFIG_KEYS
