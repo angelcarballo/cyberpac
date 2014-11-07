@@ -1,4 +1,6 @@
 :merchant_code: 123456789
 :terminal_number: 2
 :secret: 'super-secret-key'
-:mode: 'test'
+:mode: :test
+:currency: :eur
+:locale: :es

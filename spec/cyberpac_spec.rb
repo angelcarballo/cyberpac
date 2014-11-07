@@ -16,6 +16,8 @@ describe Cyberpac do
          expect(subject.terminal_number).to eq(valid_config[:terminal_number])
          expect(subject.secret).to          eq(valid_config[:secret])
          expect(subject.mode).to            eq(valid_config[:mode])
+         expect(subject.currency).to        eq(valid_config[:currency])
+         expect(subject.locale).to          eq(valid_config[:locale])
       end
 
       it 'should setup config keys with block' do
@@ -29,6 +31,8 @@ describe Cyberpac do
          expect(subject.terminal_number).to eq(valid_config[:terminal_number])
          expect(subject.secret).to          eq(valid_config[:secret])
          expect(subject.mode).to            eq(valid_config[:mode])
+         expect(subject.currency).to        eq(valid_config[:currency])
+         expect(subject.locale).to          eq(valid_config[:locale])
       end
    end
 
@@ -53,6 +57,27 @@ describe Cyberpac do
          subject.configure(valid_config.merge(secret: nil))
          expect(subject.configured?).to_not be
       end
+   end
+
+   describe '.mode' do
+     it 'should have a default value (test)' do
+       subject.configure(valid_config.merge(mode: nil))
+       expect(subject.mode).to eq(Cyberpac::DEFAULT_MODE)
+     end
+   end
+
+   describe '.locale' do
+     it 'should have a default value (es)' do
+       subject.configure(valid_config.merge(locale: nil))
+       expect(subject.locale).to eq(Cyberpac::DEFAULT_LOCALE)
+     end
+   end
+
+   describe '.currency' do
+     it 'should have a default value (es)' do
+       subject.configure(valid_config.merge(currency: nil))
+       expect(subject.currency).to eq(Cyberpac::DEFAULT_CURRENCY)
+     end
    end
 
 end
