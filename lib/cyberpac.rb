@@ -6,8 +6,8 @@ module Cyberpac
   CONFIG_KEYS = %w(merchant_code terminal_number secret mode currency locale)
 
   MODES = %i(test production)
-  LOCALES = YAML.load(File.read(File.expand_path('../../support/locales.yml', __FILE__)))
-  CURRENCIES = YAML.load(File.read(File.expand_path('../../support/currencies.yml', __FILE__)))
+  LOCALES = YAML.load_file(File.expand_path('../../support/locales.yml', __FILE__))
+  CURRENCIES = YAML.load_file(File.expand_path('../../support/currencies.yml', __FILE__))
 
   DEFAULT_MODE = :test
   DEFAULT_CURRENCY = :eur

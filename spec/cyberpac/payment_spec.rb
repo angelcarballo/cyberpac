@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe Cyberpac::Payment do
   let(:valid_config) {
-    YAML.load(File.read(File.expand_path('../../support/valid_config.yml', __FILE__)))
+    YAML.load_file File.expand_path('../../support/valid_config.yml', __FILE__)
   }
 
   let(:valid_payment_options) {
-    YAML.load(File.read(File.expand_path('../../support/valid_payment_options.yml', __FILE__)))
+    YAML.load_file File.expand_path('../../support/valid_payment_options.yml', __FILE__)
   }
 
   before(:each) do
