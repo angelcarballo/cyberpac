@@ -1,0 +1,8 @@
+:amount_cents: 8675 # 86.75 eur/usd/..
+:order_number: 9999 # 86.75 eur/usd/..
+:description: 'Order #9999'
+:client_name: 'Paco Perez'
+:notify_url: 'http://test.com/cyberpac/notify'
+:success_url: 'http://test.com/cyberpac/success'
+:error_url: 'http://test.com/cyberpac/error'
+:merchant_data: 'Extra data for merchant (this will be included on any response the services returns)'

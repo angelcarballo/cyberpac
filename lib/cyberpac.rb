@@ -43,6 +43,14 @@ module Cyberpac
       (@currency ||= DEFAULT_CURRENCY).to_sym
     end
 
+    def locale_code
+      LOCALES[locale]
+    end
+
+    def currency_code
+      CURRENCIES[currency]
+    end
+
   end
 
   # Exceptions
