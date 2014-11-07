@@ -74,7 +74,7 @@ describe Cyberpac do
   end
 
   describe '.currency' do
-    it 'should have a default value (es)' do
+    it 'should have a default value (eur)' do
       subject.configure(valid_config.merge(currency: nil))
       expect(subject.currency).to eq(Cyberpac::DEFAULT_CURRENCY)
     end
